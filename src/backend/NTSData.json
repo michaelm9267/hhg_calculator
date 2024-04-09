@@ -1,0 +1,30 @@
+[
+  {
+    "id": "1",
+    "NTS-TSP Name": "COLEMAN MOVING AND ST",
+    "Code": "CXAB",
+    "City": "ABILENE, TX",
+    "TOS Number": "18-G-7221",
+    "SC Number": "C00017",
+    "TOS Mod": "IE",
+    "Pack Rate": "23.00",
+    "Wrdrb Rate": "29.50",
+    "Hi Val Rate": "0.00",
+    "HI Rate": "4.00",
+    "Strg Rate": "4.01",
+    "HO Rate": "4.00",
+    "UnpackDray": "22.80",
+    "RateZone": "D1",
+    "Dray In": "36.50",
+    "Dray Out": "43.80",
+    "Effect Date": "01-4-24",
+    "6 Mon": "91.56",
+    "12 Mon": "115.62",
+    "18 Mon": "139.68",
+    "24 Mon": "163.74",
+    "30 Mon": "187.80",
+    "36 Mon": "211.86"
+  }
+]
+
+
