@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from "react-router-dom"
 import { Box, Stack, Typography, useTheme, useMediaQuery } from '@mui/material'
 import Hamburger from 'hamburger-react'
 
@@ -11,10 +12,18 @@ const Layout = ({children}) => {
     <Box className='layout-header'>
         {isMobile ? <Hamburger className={'menu'} toggled={isOpen} toggle={setOpen} onToggle={() => setOpen(!isOpen)} /> : null}
         <Typography variant={isMobile ? "h5" : "h2"}>HHG Tools</Typography>
-        <Box className='header-links'>
-            {!isMobile && <Typography variant="h4">NTS Calculator</Typography>}
-            {/* <Typography variant="h4">SIT Calculator</Typography> */}
-        </Box>
+        <Link to="/NTSCalulator" >
+          <Box className='header-links'>
+              {!isMobile && <Typography variant="h6">NTS Calculator</Typography>}
+              {/* <Typography variant="h4">SIT Calculator</Typography> */}
+          </Box>
+        </Link>
+        <Link to='/PPMCalculator'>
+          <Box className='header-links'>
+              {!isMobile && <Typography variant="h6">PPM Calculator</Typography>}
+              {/* <Typography variant="h4">SIT Calculator</Typography> */}
+          </Box>
+        </Link>
     </Box>
     {children}
 
