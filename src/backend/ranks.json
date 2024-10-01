@@ -1,0 +1,179 @@
+{
+  "ranks": [
+    {
+      "grade": "E1",
+      "weightAllowance": {
+        "withDependents": 8000,
+        "withoutDependents": 5000
+      }
+    },
+    {
+      "grade": "E2",
+      "weightAllowance": {
+        "withDependents": 8000,
+        "withoutDependents": 5000
+      }
+    },
+    {
+      "grade": "E3",
+      "weightAllowance": {
+        "withDependents": 8000,
+        "withoutDependents": 5000
+      }
+    },
+    {
+      "grade": "E4",
+      "weightAllowance": {
+        "withDependents": 8000,
+        "withoutDependents": 7000
+      }
+    },
+    {
+      "grade": "E5",
+      "weightAllowance": {
+        "withDependents": 9000,
+        "withoutDependents": 7000
+      }
+    },
+    {
+      "grade": "E6",
+      "weightAllowance": {
+        "withDependents": 11000,
+        "withoutDependents": 9000
+      }
+    },
+    {
+      "grade": "E7",
+      "weightAllowance": {
+        "withDependents": 13000,
+        "withoutDependents": 11000
+      }
+    },
+    {
+      "grade": "E8",
+      "weightAllowance": {
+        "withDependents": 14000,
+        "withoutDependents": 12000
+      }
+    },
+    {
+      "grade": "E9",
+      "weightAllowance": {
+        "withDependents": 15000,
+        "withoutDependents": 13000
+      }
+    },
+    {
+      "grade": "WO1",
+      "weightAllowance": {
+        "withDependents": 12000,
+        "withoutDependents": 10000
+      }
+    },
+    {
+      "grade": "WO2",
+      "weightAllowance": {
+        "withDependents": 13500,
+        "withoutDependents": 12500
+      }
+    },
+    {
+      "grade": "WO3",
+      "weightAllowance": {
+        "withDependents": 14500,
+        "withoutDependents": 13000
+      }
+    },
+    {
+      "grade": "WO4",
+      "weightAllowance": {
+        "withDependents": 17000,
+        "withoutDependents": 14000
+      }
+    },
+    {
+      "grade": "WO5",
+      "weightAllowance": {
+        "withDependents": 17500,
+        "withoutDependents": 16000
+      }
+    },
+    {
+      "grade": "O1",
+      "weightAllowance": {
+        "withDependents": 12000,
+        "withoutDependents": 10000
+      }
+    },
+    {
+      "grade": "O2",
+      "weightAllowance": {
+        "withDependents": 13500,
+        "withoutDependents": 12500
+      }
+    },
+    {
+      "grade": "O3",
+      "weightAllowance": {
+        "withDependents": 14500,
+        "withoutDependents": 13000
+      }
+    },
+    {
+      "grade": "O4",
+      "weightAllowance": {
+        "withDependents": 17000,
+        "withoutDependents": 14000
+      }
+    },
+    {
+      "grade": "O5",
+      "weightAllowance": {
+        "withDependents": 17500,
+        "withoutDependents": 116000
+      }
+    },
+    {
+      "grade": "O6",
+      "weightAllowance": {
+        "withDependents": 18000,
+        "withoutDependents": 18000
+      }
+    },
+    {
+      "grade": "O7",
+      "weightAllowance": {
+        "withDependents": 18000,
+        "withoutDependents": 18000
+      }
+    },
+    {
+      "grade": "O8",
+      "weightAllowance": {
+        "withDependents": 18000,
+        "withoutDependents": 18000
+      }
+    },
+    {
+      "grade": "O9",
+      "weightAllowance": {
+        "withDependents": 18000,
+        "withoutDependents": 18000
+      }
+    },
+    {
+      "grade": "O10",
+      "weightAllowance": {
+        "withDependents": 18000,
+        "withoutDependents": 18000
+      }
+    },
+    {
+      "grade": "CIV",
+      "weightAllowance": {
+        "withDependents": 18000,
+        "withoutDependents": 18000
+      }
+    }
+  ]
+}
