@@ -18,6 +18,11 @@ const Layout = ({children}) => {
               {/* <Typography variant="h4">SIT Calculator</Typography> */}
           </Box>
         </Link>
+        <Link to="/PPMCalulator" >
+          <Box className='header-links'>
+              {!isMobile && <Typography variant="h6">PPM Calculator</Typography>}
+          </Box>
+        </Link>
     </Box>
     {children}
 

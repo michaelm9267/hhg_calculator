@@ -1,5 +1,4 @@
-{
-  "ranks": [
+ [
     {
       "grade": "E1",
       "weightAllowance": {
@@ -54,119 +53,136 @@
       "weightAllowance": {
         "withDependents": 14000,
         "withoutDependents": 12000
-      }
+      },
+      "ub": 500
     },
     {
       "grade": "E9",
       "weightAllowance": {
         "withDependents": 15000,
         "withoutDependents": 13000
-      }
+      },
+      "ub": 600
     },
     {
       "grade": "WO1",
       "weightAllowance": {
         "withDependents": 12000,
         "withoutDependents": 10000
-      }
+      },
+      "ub": 600
     },
     {
       "grade": "WO2",
       "weightAllowance": {
         "withDependents": 13500,
         "withoutDependents": 12500
-      }
+      },
+      "ub": 600
     },
     {
       "grade": "WO3",
       "weightAllowance": {
         "withDependents": 14500,
         "withoutDependents": 13000
-      }
+      },
+      "ub": 600
     },
     {
       "grade": "WO4",
       "weightAllowance": {
         "withDependents": 17000,
         "withoutDependents": 14000
-      }
+      },
+      "ub": 800
     },
     {
       "grade": "WO5",
       "weightAllowance": {
         "withDependents": 17500,
         "withoutDependents": 16000
-      }
+      },
+      "ub": 800
     },
     {
       "grade": "O1",
       "weightAllowance": {
         "withDependents": 12000,
         "withoutDependents": 10000
-      }
+      },
+      "ub": 600
     },
     {
       "grade": "O2",
       "weightAllowance": {
         "withDependents": 13500,
         "withoutDependents": 12500
-      }
+      },
+      "ub": 600
     },
     {
       "grade": "O3",
       "weightAllowance": {
         "withDependents": 14500,
         "withoutDependents": 13000
-      }
+      },
+      "ub": 600
     },
     {
       "grade": "O4",
       "weightAllowance": {
         "withDependents": 17000,
         "withoutDependents": 14000
-      }
+      },
+      "ub": 800
     },
     {
       "grade": "O5",
       "weightAllowance": {
         "withDependents": 17500,
         "withoutDependents": 116000
-      }
+      },
+      "ub": 800
     },
     {
       "grade": "O6",
       "weightAllowance": {
         "withDependents": 18000,
         "withoutDependents": 18000
-      }
+      },
+      "ub": 800
     },
     {
       "grade": "O7",
       "weightAllowance": {
         "withDependents": 18000,
         "withoutDependents": 18000
-      }
+      },
+      "ub": 1000
     },
     {
       "grade": "O8",
       "weightAllowance": {
         "withDependents": 18000,
         "withoutDependents": 18000
-      }
+      },
+      "ub": 1000
     },
     {
       "grade": "O9",
       "weightAllowance": {
         "withDependents": 18000,
         "withoutDependents": 18000
-      }
+      },
+      "ub": 1500
     },
     {
       "grade": "O10",
       "weightAllowance": {
         "withDependents": 18000,
         "withoutDependents": 18000
-      }
+      },
+      "ub": 2000
     },
     {
       "grade": "CIV",
@@ -176,4 +192,4 @@
       }
     }
   ]
-}
+

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import './App.css';
 import NTSCalculator from './frontend/Components/NTSCalculator.js';
+import PPM_Calculator from './frontend/Components/PPM_Calculator.jsx';
 import Layout from './frontend/Layout/Layout.js';
 
 function App() {
@@ -14,6 +15,7 @@ const [data, setData] = useState(null);
         <Layout>
         <Routes>
           <Route path="/NTSCalulator" element={<NTSCalculator url={url} data={data} setData={setData} />} />
+          <Route path="/PPMCalulator" element={<PPM_Calculator url={url} data={data} setData={setData} />} />
         </Routes>
         
         </Layout> 
