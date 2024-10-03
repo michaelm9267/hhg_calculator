@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+// PPM_Calculator.jsx
+import React, { useState, useRef } from "react";
 import {
   Box,
   Typography,
@@ -8,11 +9,21 @@ import {
   FormControl,
   InputLabel,
   Grid,
+  Button,
 } from "@mui/material";
 import ranks from "../../backend/ranks.json";
 import GovMove from "./GovMove";
 import WeightTickets from "./WeightTickets";
 import TotalWeight from "./TotalWeight";
+import PrintableForm from "./PrintableForm";
+import { useReactToPrint } from "react-to-print";
+import { getTotalWeights } from "./utils";
+import { jsPDF } from "jspdf";
+import html2canvas from "html2canvas";
+import html2pdf from "html2pdf.js";
+
+
+
 
 const PPM_Calculator = () => {
   // State variables for member info
@@ -38,6 +49,40 @@ const PPM_Calculator = () => {
       [field]: event.target.value,
     });
   };
+
+  // Ref for the PrintableForm component
+  // Refs
+  const printableRef = useRef();
+
+  // Handle PDF generation and opening in a new tab
+
+  const handlePrint = () => {
+    const element = printableRef.current;
+  
+    const options = {
+      margin: 0,
+      filename: "PPM Calculator.pdf",
+      image: { type: "jpeg", quality: 0.98 },
+      html2canvas: { scale: 2, useCORS: true },
+      jsPDF: { unit: "pt", format: "a4", orientation: "portrait" },
+    };
+  
+    html2pdf()
+      .set(options)
+      .from(element)
+      .toPdf()
+      .get('pdf')
+      .then((pdf) => {
+        const pdfBlobUrl = pdf.output('bloburl');
+        window.open(pdfBlobUrl);
+      })
+      .catch((error) => {
+        console.error("Error generating PDF:", error);
+      });
+  };
+  // Calculate totalWeights
+  const totalWeights = getTotalWeights(memberInfo, govMoves, weightTickets, ranks);
+
 
   return (
     <>
@@ -163,16 +208,36 @@ const PPM_Calculator = () => {
           </Grid>
         </Grid>
       </Box>
-      {/* GovMove Component */}
-      <GovMove govMoves={govMoves} setGovMoves={setGovMoves} />
+{/* GovMove Component */}
+<GovMove govMoves={govMoves} setGovMoves={setGovMoves} />
       {/* WeightTickets Component */}
-      <WeightTickets weightTickets={weightTickets} setWeightTickets={setWeightTickets} />
+      <WeightTickets
+        weightTickets={weightTickets}
+        setWeightTickets={setWeightTickets}
+      />
       {/* TotalWeight Component */}
       <TotalWeight
         memberInfo={memberInfo}
         govMoves={govMoves}
         weightTickets={weightTickets}
         ranks={ranks}
+        totalWeights={totalWeights} // Pass totalWeights as prop
+      />
+
+      {/* Print Button */}
+      <Box mt={4} textAlign="center">
+        <Button variant="contained" color="primary" onClick={handlePrint}>
+          Print Form
+        </Button>
+      </Box>
+
+      {/* PrintableForm Component */}
+      <PrintableForm
+        ref={printableRef}
+        memberInfo={memberInfo}
+        govMoves={govMoves}
+        weightTickets={weightTickets}
+        totalWeights={totalWeights} // Pass totalWeights as prop
       />
     </>
   );

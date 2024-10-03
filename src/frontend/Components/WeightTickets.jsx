@@ -40,11 +40,9 @@ const WeightTickets = ({ weightTickets, setWeightTickets }) => {
       return;
     }
 
-    // Subtract 10% of grossWeight for packing material
-    const packingMaterialWeight = 0.1 * grossWeight;
 
     const totalWeight =
-      grossWeight - tareWeight - pbpe - packingMaterialWeight;
+      grossWeight - tareWeight - pbpe;
 
     const ticket = {
       ...newTicket,
@@ -52,7 +50,6 @@ const WeightTickets = ({ weightTickets, setWeightTickets }) => {
       tareWeight,
       pbpe,
       totalWeight,
-      packingMaterialWeight,
     };
 
     setWeightTickets([...weightTickets, ticket]);
@@ -126,7 +123,6 @@ const WeightTickets = ({ weightTickets, setWeightTickets }) => {
               <TableCell>Gross Weight</TableCell>
               <TableCell>Tare Weight</TableCell>
               <TableCell>PBP&E</TableCell>
-              <TableCell>Packing Material (10%)</TableCell>
               <TableCell>Total Weight</TableCell>
               <TableCell>Action</TableCell>
             </TableRow>
@@ -137,7 +133,6 @@ const WeightTickets = ({ weightTickets, setWeightTickets }) => {
                 <TableCell>{ticket.grossWeight}</TableCell>
                 <TableCell>{ticket.tareWeight}</TableCell>
                 <TableCell>{ticket.pbpe}</TableCell>
-                <TableCell>{ticket.packingMaterialWeight.toFixed(2)}</TableCell>
                 <TableCell>{ticket.totalWeight.toFixed(2)}</TableCell>
                 <TableCell>
                   <IconButton onClick={() => deleteTicket(index)}>
