@@ -1,15 +1,19 @@
 {
   "files": {
     "main.css": "/hhg_calculator/static/css/main.a56ff04d.css",
-    "main.js": "/hhg_calculator/static/js/main.b3d86c1f.js",
+    "main.js": "/hhg_calculator/static/js/main.254ee277.js",
+    "static/js/213.03411536.chunk.js": "/hhg_calculator/static/js/213.03411536.chunk.js",
+    "static/js/732.ccf00b4d.chunk.js": "/hhg_calculator/static/js/732.ccf00b4d.chunk.js",
     "static/js/453.6aa70ab1.chunk.js": "/hhg_calculator/static/js/453.6aa70ab1.chunk.js",
     "index.html": "/hhg_calculator/index.html",
     "main.a56ff04d.css.map": "/hhg_calculator/static/css/main.a56ff04d.css.map",
-    "main.b3d86c1f.js.map": "/hhg_calculator/static/js/main.b3d86c1f.js.map",
+    "main.254ee277.js.map": "/hhg_calculator/static/js/main.254ee277.js.map",
+    "213.03411536.chunk.js.map": "/hhg_calculator/static/js/213.03411536.chunk.js.map",
+    "732.ccf00b4d.chunk.js.map": "/hhg_calculator/static/js/732.ccf00b4d.chunk.js.map",
     "453.6aa70ab1.chunk.js.map": "/hhg_calculator/static/js/453.6aa70ab1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a56ff04d.css",
-    "static/js/main.b3d86c1f.js"
+    "static/js/main.254ee277.js"
   ]
 }
