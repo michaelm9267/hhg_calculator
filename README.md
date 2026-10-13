@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+# Household goods tools
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A browser-based PPM weight planner, SIT reimbursement calculator, and personally procured NTS cost estimator for transportation counseling and move planning.
 
-## Available Scripts
+## Run locally
 
-In the project directory, you can run:
+```sh
+npm ci
+npm start
+```
 
-### `npm start`
+Open http://localhost:3000. The home page opens the PPM planner; navigation switches between PPM, SIT and NTS without losing entered data. Shipment entries stay in memory for the current tab and clear on refresh. Only JBER rates explicitly saved with the preset button persist in this browser. No backend or SSN is needed.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## What changed
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Dark slate/navy styling, teal accents, mobile forms and navigation, validation and itemized summaries.
+- SIT: inclusive day counts, prior-day usage, expiration, approved extensions, domestic/international HHG rates, tariff minimums and actual-cost caps.
+- Actual tickets stay intact; remaining allowance and excess weight are separate.
+- Correct O-5 allowance; separate aggregate member, dependent-spouse and combined military-member professional gear credits.
+- Counselor-confirmed packing adjustments and allowance overrides for special cases.
+- NTS starts at JBER/Anchorage with dollar defaults pending a verified current JBER rate sheet. Enter the applicable rates/source/date and use **Save as JBER defaults** to prefill them in this browser next time. Shipment authorization and rate-applicability confirmation reset in new sessions. Historical Dyess and public Fairbanks schedules are not used as JBER prices.
+- Storage payment distinguishes eligible actual costs capped at GCC from explicitly authorized DAF monetary allowances, and accounts for prior payments.
+- Print / save PDF uses the browser's print dialog and a dedicated print layout.
 
-### `npm test`
+Policy review: **12 October 2026**, using the attached **DAFI 24-602 V4, 2 June 2026**, and current-index DTR Part IV chapters. See [source mapping, calculation decisions and limits](docs/policy-review.md). The worksheet assists planning; official entitlement, rates, exception handling and settlement require transportation-office review.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Verify
 
-### `npm run build`
+```sh
+CI=true npm test -- --watchAll=false --runInBand
+npm run build
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The production build targets `/hhg_calculator/` from `package.json`. Hash routes support GitHub Pages without server rewrite rules: `/#/ppm`, `/#/sit` and `/#/nts`. Misspelled legacy hash routes `/PPMCalulator` and `/NTSCalulator` redirect to the corresponding calculator. Legacy direct-path bookmarks require hosting support to reach `index.html`.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Publishing is separate from building. `npm run deploy` publishes to the configured GitHub Pages site; the UI/policy update does not deploy automatically.
